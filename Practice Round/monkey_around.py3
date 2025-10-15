@@ -28,8 +28,7 @@ def monkey_around():
     result = []
     for a, b in zip(op1, op2):
         result.append("1 %s" % a)
-        for _ in range(b):
-            result.append("2")
+        result.extend(("2" for _ in range(b)))
     assert(len(result) <= 2*N)
     return "%s\n%s" % (len(result), "\n".join(result))
 
