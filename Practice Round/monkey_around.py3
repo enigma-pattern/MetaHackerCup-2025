@@ -21,10 +21,10 @@ def monkey_around():
         for _ in range(A[left]-1):
             right += 1
         left = right+1
-    curr = 0
+    suffix = 0
     for i in reversed(range(len(op2)-1)):
-        curr += op2[i+1]
-        op2[i] = (op2[i]-curr)%op1[i]
+        suffix += op2[i+1]
+        op2[i] = (op2[i]-suffix)%op1[i]
     result = []
     for a, b in zip(op1, op2):
         result.append("1 %s" % a)
