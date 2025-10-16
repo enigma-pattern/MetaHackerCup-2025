@@ -36,15 +36,13 @@ def warm_up():
     for i, x in enumerate(A):
         group[x].append(i)
     adj = [[] for _ in range(N)]
-    for x, y, i in sorted((x, y, i) for i, (x, y) in enumerate(zip(A, B)) if x != y):
+    for i, (x, y) in enumerate(zip(A, B)):
+        if x == y:
+            continue
         if not (x < y and group[y]):
             return -1
         adj[i].append(group[y][0])
-    result = []
-    for i in topological_sort(adj):
-        if not adj[i]:
-            continue
-        result.append((i+1, adj[i][0]+1))
+    result = [(i+1, adj[i][0]+1) for i in topological_sort(adj) if adj[i]]
     return "%s\n%s" % (len(result), "\n".join("%d %d" % p for p in result)) if result else 0
 
 for case in range(int(input())):
