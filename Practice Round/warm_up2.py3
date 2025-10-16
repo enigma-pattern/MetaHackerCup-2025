@@ -35,7 +35,6 @@ def warm_up():
     group = defaultdict(list)
     for i, x in enumerate(A):
         group[x].append(i)
-    
     adj = [[] for _ in range(N)]
     for x, y, i in sorted((x, y, i) for i, (x, y) in enumerate(zip(A, B)) if x != y):
         if not (x < y and group[y]):
