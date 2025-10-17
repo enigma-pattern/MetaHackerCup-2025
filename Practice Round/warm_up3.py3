@@ -9,9 +9,9 @@
 
 def warm_up():
     N = int(input())
-    A = list(map(int, input().split()))
-    B = list(map(int, input().split()))
-    group = [[] for _ in range(N+1)]
+    A = list(map(lambda x: int(x)-1, input().split()))
+    B = list(map(lambda x: int(x)-1, input().split()))
+    group = [[] for _ in range(N)]
     for i, x in enumerate(A):
         group[x].append(i)
     result = []
