@@ -29,7 +29,7 @@ def monkey_around():
     for a, b in zip(op1, op2):
         result.append("1 %s" % a)
         result.extend(("2" for _ in range(b)))
-    assert(len(result) <= 2*N)
+    assert(len(result) <= N)
     return "%s\n%s" % (len(result), "\n".join(result))
 
 for case in range(int(input())):

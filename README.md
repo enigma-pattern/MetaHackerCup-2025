@@ -12,7 +12,7 @@
 ## Practice Round
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
 |---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
-|A| [Warm Up](https://www.facebook.com/codingcompetitions/hacker-cup/2025/practice-round/problems/A)| [Python3](./Practice%20Round/warm_up.py3) [Python3](./Practice%20Round/warm_up2.py3) | _O(N)_ | _O(N)_ | Easy | | Hash Table, Sort, Topological Sort |
+|A| [Warm Up](https://www.facebook.com/codingcompetitions/hacker-cup/2025/practice-round/problems/A)| [Python3](./Practice%20Round/warm_up.py3) [Python3](./Practice%20Round/warm_up2.py3) [Python3](./Practice%20Round/warm_up3.py3) | _O(N)_ | _O(N)_ | Easy | | Hash Table, Sort, Topological Sort |
 |B| [Zone In](https://www.facebook.com/codingcompetitions/hacker-cup/2025/practice-round/problems/B)| [Python3](./Practice%20Round/zone_in.py3) | _O(R * C)_ | _O(1)_ | Easy | | BFS, Flood Fill |
 |C| [Monkey Around](https://www.facebook.com/codingcompetitions/hacker-cup/2025/practice-round/problems/C)| [Python3](./Practice%20Round/monkey_around.py3) | _O(N)_ | _O(N)_ | Easy | | Constructive Algorithms, Prefix Sum |
 |D| [Plan Out](https://www.facebook.com/codingcompetitions/hacker-cup/2025/practice-round/problems/D)|  |  |  | Medium |  |  |
