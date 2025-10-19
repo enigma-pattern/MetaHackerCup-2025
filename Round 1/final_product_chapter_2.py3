@@ -72,7 +72,7 @@ def solution():
         factors2 = {}
         for p, x in B_factors.items():
             factors2[p] = x-factors1[p]
-        result = (result+count(factors1)*count(factors2)) % MOD
+        result = (result+count(factors1)*count(factors2))%MOD
     return result
 
 for case in range(int(input())):
