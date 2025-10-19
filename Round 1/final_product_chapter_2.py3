@@ -55,6 +55,17 @@ def factors(n):
             yield n//i
 
 def solution():
+    def factors2(n):
+        result = defaultdict(int)
+        for p in B_factors.keys():
+            cnt = 0
+            while not n%p:
+                n //= p
+                cnt += 1
+            if cnt:
+                result[p] = cnt
+        return result
+
     def count(factors):
         return reduce(lambda a, b: a*b % MOD, (nHr(x, N) for x in factors.values()), 1)
 
@@ -64,19 +75,9 @@ def solution():
     for d in factors(B):
         if d > A:
             continue
-        factors1 = defaultdict(int)
-        x = d
-        for p in B_factors.keys():
-            cnt = 0
-            while not x%p:
-                x //= p
-                cnt += 1
-            if cnt:
-                factors1[p] = cnt
-        factors2 = {}
-        for p, x in B_factors.items():
-            factors2[p] = x-factors1[p]
-        result = (result+count(factors1)*count(factors2))%MOD
+        f1 = factors2(d)
+        f2 = defaultdict(int, {p:x-f1[p] for p, x in B_factors.items()})
+        result = (result+count(f1)*count(f2))%MOD
     return result
 
 for case in range(int(input())):
