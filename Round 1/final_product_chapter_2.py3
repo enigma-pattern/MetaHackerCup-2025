@@ -3,7 +3,7 @@
 # Meta Hacker Cup 2025 Round 1 - Problem B1. Final Product (Chapter 1)
 # https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-1/problems/B1
 #
-# Time:  O(log(B) * logM + sqrt(B) + (logB)^2)
+# Time:  O(sqrt(B) + (logB)^2) = O(sqrt(B))
 # Space: O(logB)
 #
 
@@ -11,18 +11,19 @@ from collections import defaultdict
 from functools import reduce
 
 MOD = 10**9+7
-LOOKUP = {}
-def inv_mod(x):
-    if x not in LOOKUP:
-        LOOKUP[x] = pow(x, MOD-2, MOD)
-    return LOOKUP[x]
+INV, INV_FACT = [[1]*2 for _ in range(2)]
+def inv_factorial(n):
+    while len(INV) <= n:  # lazy initialization
+        INV.append(INV[MOD%len(INV)]*(MOD-MOD//len(INV)) % MOD)
+        INV_FACT.append(INV_FACT[-1]*INV[-1] % MOD)
+    return INV_FACT[n]
 
 def nCr(n, k):
     if n-k < k:
         k = n-k
-    result = 1
+    result = inv_factorial(k)
     for i in range(k):
-        result = (result*(n-i))*inv_mod(i+1)%MOD
+        result = (result*(n-i))%MOD
     return result
 
 def nHr(n, k):
