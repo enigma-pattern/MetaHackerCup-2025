@@ -4,7 +4,7 @@
 # https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-1/problems/C
 #
 # Time:  O(N)
-# Space: O(1)
+# Space: O(N)
 #
 
 from collections import defaultdict
