@@ -85,7 +85,7 @@ def plan_out():
         edges.append((0, u))
         degree[0] += 2
         degree[u] += 2
-    assert(degree[0]%2 == 0)
+    assert(all(x%2 == 0 for x in degree))
     adj = [[] for _ in range(N+1)]
     for i, (a, b) in enumerate(edges):
         adj[a].append((b, i))
