@@ -81,10 +81,10 @@ def plan_out():
     for u in range(N+1):
         if not uf.union_set(0, u):
             continue
-        edges.append((0, u))
-        edges.append((0, u))
-        degree[0] += 2
-        degree[u] += 2
+        for _ in range(2):
+            edges.append((0, u))
+            degree[0] += 1
+            degree[u] += 1
     assert(all(x%2 == 0 for x in degree))
     adj = [[] for _ in range(N+1)]
     for i, (a, b) in enumerate(edges):
