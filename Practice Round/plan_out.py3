@@ -3,8 +3,8 @@
 # Meta Hacker Cup 2025 Practice Round - Problem D. Plan Out
 # https://www.facebook.com/codingcompetitions/hacker-cup/2025/practice-round/problems/D
 #
-# Time:  O(N)
-# Space: O(N)
+# Time:  O(N + M)
+# Space: O(N + M)
 #
 
 class UnionFind(object):  # Time: O(n * alpha(n)), Space: O(n)
