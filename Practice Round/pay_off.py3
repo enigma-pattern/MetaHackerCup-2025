@@ -1,6 +1,6 @@
 # Copyright (c) 2025 kamyu. All rights reserved.
 #
-# Meta Hacker Cup 2025 Practice Round-Problem E. Pay Off
+# Meta Hacker Cup 2025 Practice Round - Problem E. Pay Off
 # https://www.facebook.com/codingcompetitions/hacker-cup/2025/practice-round/problems/E
 #
 # Time:  O(QlogQ + (N + Q) * logN)
