@@ -69,7 +69,7 @@ def plan_out():
     for a, b in edges:
         degree[a] += 1
         degree[b] += 1
-    for u in range(1, N+1):
+    for u in range(N+1):
         if degree[u]%2 == 0:
             continue
         edges.append((0, u))
@@ -78,7 +78,7 @@ def plan_out():
     uf = UnionFind(N+1)
     for a, b in edges:
         uf.union_set(a, b)
-    for u in range(1, N+1):
+    for u in range(N+1):
         if not uf.union_set(0, u):
             continue
         edges.append((0, u))
@@ -92,7 +92,7 @@ def plan_out():
         adj[b].append((a, i))
     path = euler_walk(adj, len(edges), 0)
     result = [-1]*M
-    for i in range(1, len(path)):
+    for i in range(len(path)):
         if path[i][1] < M:
             result[path[i][1]] = i%2
     cnt = [[0]*(N+1) for _ in range(2)]
