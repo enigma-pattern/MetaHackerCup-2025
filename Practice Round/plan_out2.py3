@@ -7,31 +7,6 @@
 # Space: O(N + M)
 #
 
-class UnionFind(object):  # Time: O(n * alpha(n)), Space: O(n)
-    def __init__(self, n):
-        self.set = list(range(n))
-        self.rank = [0]*n
-
-    def find_set(self, x):
-        stk = []
-        while self.set[x] != x:  # path compression
-            stk.append(x)
-            x = self.set[x]
-        while stk:
-            self.set[stk.pop()] = x
-        return x
-
-    def union_set(self, x, y):
-        x, y = self.find_set(x), self.find_set(y)
-        if x == y:
-            return False
-        if self.rank[x] > self.rank[y]:  # union by rank
-            x, y = y, x
-        if self.rank[x] == self.rank[y]:
-            self.rank[y] += 1
-        self.set[x] = self.set[y]
-        return True
-
 # template: https://github.com/kth-competitive-programming/kactl/blob/main/content/graph/EulerWalk.h
 def euler_walk(gr, nedges, src=0):
     n = len(gr)
@@ -62,6 +37,21 @@ def euler_walk(gr, nedges, src=0):
     return ret
 
 def plan_out():
+    def bfs(u):
+        if lookup[u]:
+            return False
+        lookup[u] = True
+        q = [u]
+        while q:
+            new_q = []
+            for v , _ in adj[u]:
+                if lookup[v]:
+                    continue
+                lookup[v] = True
+                new_q.append(v)
+            q = new_q
+        return True
+
     N, M = list(map(int, input().split()))
     A_B = [list(map(int, input().split())) for _ in range(M)]
     edges = A_B[:]
@@ -75,21 +65,22 @@ def plan_out():
         edges.append((0, u))
         degree[0] += 1
         degree[u] += 1
-    uf = UnionFind(N+1)
-    for a, b in edges:
-        uf.union_set(a, b)
-    for u in range(N+1):
-        if not uf.union_set(0, u):
+    adj = [[] for _ in range(N+1)]
+    for i, (a, b) in enumerate(edges):
+        adj[a].append((b, i))
+        adj[b].append((a, i))
+    lookup = [False]*(N+1)
+    bfs(0)
+    for u in range(1, N+1):
+        if not bfs(u):
             continue
         for _ in range(2):
             edges.append((0, u))
             degree[0] += 1
             degree[u] += 1
+            adj[0].append((u, len(edges)-1))
+            adj[u].append((0, len(edges)-1))
     assert(all(x%2 == 0 for x in degree))
-    adj = [[] for _ in range(N+1)]
-    for i, (a, b) in enumerate(edges):
-        adj[a].append((b, i))
-        adj[b].append((a, i))
     path = euler_walk(adj, len(edges), 0)
     result = [-1]*M
     for i in range(len(path)):
