@@ -31,8 +31,8 @@ def pay_off():
         for l, r, s in group[i]:
             a = X[i]-l
             b = min(f(2*s-a, 2*(r-l)), r-l)
-            for q in ((l+b+1, -1), (r+1, -1)):
-                idx = robots.bisect_left(q)-1
+            for x in (l+b, r):
+                idx = robots.bisect_left((x+1, -1))-1
                 if idx < 0:
                     continue
                 robot = robots[idx]
