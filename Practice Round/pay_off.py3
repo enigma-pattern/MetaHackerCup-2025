@@ -38,7 +38,7 @@ def pay_off():
                 robot = robots[idx]
                 if robot[0]-l < 0:
                     continue
-                if f(2*s-(a+(robot[0]-l)), 2*(r-l)) <= 2*s:
+                if f(2*s-(a+(robot[0]-l)), 2*(r-l)) <= 2*s:  # equivalent to 2*s-(a+(robot[0]-l)) >= 0
                     result += robot[1]+1
                 break
         robots.add((X[i], i))
