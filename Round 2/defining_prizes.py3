@@ -3,7 +3,7 @@
 # Meta Hacker Cup 2025 Round 2 - Problem B. Defining Prizes
 # https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/B
 #
-# Time:  O(NlogN)
+# Time:  O(M + NlogN)
 # Space: O(N)
 #
 
