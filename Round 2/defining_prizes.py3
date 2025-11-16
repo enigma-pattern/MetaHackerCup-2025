@@ -18,8 +18,7 @@ def binary_search_right(left, right, check):
 
 def defining_prizes():
     def check(c):
-        bal = curr = 0
-        idx = 0
+        curr = idx = bal = 0
         for i in range(c):
             for _ in range(group[~i]):
                 curr += 1
