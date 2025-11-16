@@ -7,8 +7,6 @@
 # Space: O(N)
 #
 
-from collections import Counter
-
 def binary_search_right(left, right, check):
     while left <= right:
         mid = left+(right-left)//2
@@ -20,27 +18,31 @@ def binary_search_right(left, right, check):
 
 def defining_prizes():
     def check(c):
-        total = curr = 0
+        bal = curr = 0
+        l = M
         for i in range(c):
-            total += sorted_cnts[i]*(c-i)
-            curr += sorted_cnts[i]
-            if total > prefix2[curr+1]+(prefix1[-1]-prefix1[curr+1])*curr:
-                return False
+            for _ in range(cnt[i]):
+                curr += 1
+                while l-1 >= 0 and B[l-1] < curr:
+                    l -= 1
+                bal += l-(c-i)
+                if bal < 0:
+                    return False
         return True
 
     N, M = list(map(int, input().split()))
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
-    group = Counter(A)
-    sorted_cnts = [group[x] for x in sorted(group.keys(), reverse=True)]
-    cnt = [0]*(N+1)
-    for x in B:
-        cnt[min(x, N)] += 1
-    prefix1, prefix2 = [0]*(N+2), [0]*(N+2)
-    for i in range(len(cnt)):
-        prefix1[i+1] = prefix1[i]+cnt[i]
-        prefix2[i+1] = prefix2[i]+cnt[i]*i
-    return sum(sorted_cnts[i] for i in range(binary_search_right(1, len(group), check)))
+    A.sort(reverse=True)
+    cnt = []
+    c = 0
+    for i in range(len(A)):
+        c += 1
+        if i+1 == len(A) or A[i+1] != A[i]:
+            cnt.append(c)
+            c = 0
+    B.sort(reverse=True)
+    return sum(cnt[i] for i in range(binary_search_right(1, len(cnt), check)))
 
 for case in range(int(input())):
     print('Case #%d: %s' % (case+1, defining_prizes()))
