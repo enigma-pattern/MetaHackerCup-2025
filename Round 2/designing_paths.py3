@@ -3,8 +3,8 @@
 # Meta Hacker Cup 2025 Round 2 - Problem C. Designing Paths
 # https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/C
 #
-# Time:  O(N + RlogR), R = sum(L)
-# Space: O(N + R)
+# Time:  O(N + SlogS), S = sum(L)
+# Space: O(N + S)
 #
 
 from sortedcontainers import SortedList

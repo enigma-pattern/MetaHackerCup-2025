@@ -35,7 +35,7 @@
 |---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
 |A| [Deciding Points](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/A)| [Python3](./Round%202/deciding_points.py3) | _O(1)_ | _O(1)_ | Easy | | Math |
 |B| [Defining Prizes](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/B)| [Python3](./Round%202/defining_prizes.py3) | _O(M + NlogN)_ | _O(N)_ | Easy | | Freq Table, Sort, Binary Search |
-|C| [Designing Paths](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/C)| [Python3](./Round%202/designing_paths.py3) | _O(N + RlogR)_ | _O(N + R)_ | Medium | | Sorted List, BFS |
+|C| [Designing Paths](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/C)| [Python3](./Round%202/designing_paths.py3) | _O(N + SlogS)_ | _O(N + S)_ | Medium | | Sorted List, BFS |
 |D| [Dividing Passcodes](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/D)| | | | Hard | | |
 |E| [Descending Platforms](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/E)| | | | Hard | | |
 
