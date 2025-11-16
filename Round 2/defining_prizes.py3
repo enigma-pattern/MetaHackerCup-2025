@@ -25,7 +25,7 @@ def defining_prizes():
                 curr += 1
                 while idx < len(B) and B[idx] < curr:
                     idx += 1
-                bal += (M-idx)-(c-i)
+                bal += (len(B)-idx)-(c-i)
                 if bal < 0:
                     return False
         return True
