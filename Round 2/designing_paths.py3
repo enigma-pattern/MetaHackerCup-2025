@@ -11,12 +11,12 @@ from sortedcontainers import SortedList
 
 def designing_paths():
     N, K, M = map(int, input().split())
-    L = [list(map(lambda x: int(x)-1, input().split())) for _ in range(M)]
+    L = [list(map(int, input().split()))[1:] for _ in range(M)]
     routes = [[] for _ in range(N)]
     for i in range(len(L)):
-        for j in range(1, len(L[i])):
-            routes[L[i][j]].append((i, j))
-    lookup = [SortedList(range(1, len(L[i]))) for i in range(len(L))]
+        for j in range(len(L[i])):
+            routes[L[i][j]-1].append((i, j))
+    lookup = [SortedList(range(len(L[i]))) for i in range(len(L))]
     D = [-1]*N
     D[0] = 0
     q = [0]
@@ -28,7 +28,7 @@ def designing_paths():
                     idx = lookup[i].bisect_left(j)
                     if idx == len(lookup[i]) or lookup[i][idx] > j+K:
                         break
-                    v = L[i][lookup[i].pop(idx)]
+                    v = L[i][lookup[i].pop(idx)]-1
                     if D[v] != -1:
                         continue
                     D[v] = D[u]+1
