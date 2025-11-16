@@ -24,10 +24,8 @@ def designing_paths():
         new_q = []
         for u in q:
             for i, j in routes[u]:
-                while True:
-                    idx = lookup[i].bisect_left(j)
-                    if idx == len(lookup[i]) or lookup[i][idx] > j+K:
-                        break
+                idx = lookup[i].bisect_left(j)
+                while idx < len(lookup[i]) and lookup[i][idx] <= j+K:
                     v = L[i][lookup[i].pop(idx)]-1
                     if D[v] != -1:
                         continue
