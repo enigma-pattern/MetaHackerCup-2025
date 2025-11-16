@@ -19,13 +19,13 @@ def binary_search_right(left, right, check):
 def defining_prizes():
     def check(c):
         bal = curr = 0
-        l = M
+        idx = 0
         for i in range(c):
-            for _ in range(cnt[i]):
+            for _ in range(cnt_A[~i]):
                 curr += 1
-                while l-1 >= 0 and B[l-1] < curr:
-                    l -= 1
-                bal += l-(c-i)
+                while idx < len(sorted_B) and sorted_B[idx] < curr:
+                    idx += 1
+                bal += (M-idx)-(c-i)
                 if bal < 0:
                     return False
         return True
@@ -33,16 +33,22 @@ def defining_prizes():
     N, M = list(map(int, input().split()))
     A = list(map(int, input().split()))
     B = list(map(int, input().split()))
-    A.sort(reverse=True)
-    cnt = []
+    A.sort()
+    cnt_A = []
     c = 0
     for i in range(len(A)):
         c += 1
         if i+1 == len(A) or A[i+1] != A[i]:
-            cnt.append(c)
+            cnt_A.append(c)
             c = 0
-    B.sort(reverse=True)
-    return sum(cnt[i] for i in range(binary_search_right(1, len(cnt), check)))
+    cnt_B = [0]*(N+1)
+    for x in B:
+        cnt_B[min(x, N)] += 1
+    sorted_B = []
+    for i in range(len(cnt_B)):
+        for _ in range(cnt_B[i]):
+            sorted_B.append(i)
+    return sum(cnt_A[~i] for i in range(binary_search_right(1, len(cnt_A), check)))
 
 for case in range(int(input())):
     print('Case #%d: %s' % (case+1, defining_prizes()))
