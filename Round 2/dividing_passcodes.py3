@@ -16,33 +16,33 @@ def rotate_right(mask, l, c):
     high = mask>>c
     return (low<<(l-c))|high
 
-def get_dp(k):
-    if DP[k] is None:
-        dp = [None]*k
-        dp[0] = [1]*(1<<(k-1))
-        for i in range(1, k):
-            dp[i] = [0]*(1<<(k-1))
-            for mask in range(1<<(k-1)):
-                for d in range(1, 10):
-                    new_mask = rotate_right(mask|(1<<(k-1)), k, d)
-                    if new_mask&(1<<(k-1)) == 0:
-                        dp[i][mask] = (dp[i][mask]+dp[i-1][new_mask])%MOD
-        DP[k] = dp
-    return DP[k]
+def increase(digits):
+    result = list(digits)
+    for i in reversed(range(len(result))):
+        if result[i] != '9':
+            result[i] = chr(ord(result[i])+1)
+            break
+        result[i] = '0'
+    else:
+        result.insert(0, '1')
+    return "".join(result)
 
 def dividing_passcodes():
-    def increase(digits):
-        result = list(digits)
-        for i in reversed(range(len(result))):
-            if result[i] != '9':
-                result[i] = chr(ord(result[i])+1)
-                break
-            result[i] = '0'
-        else:
-            result.insert(0, '1')
-        return "".join(result)
+    def get_dp(k):
+        if DP[k] is None:
+            dp = [None]*k
+            dp[0] = [1]*(1<<(k-1))
+            for i in range(1, k):
+                dp[i] = [0]*(1<<(k-1))
+                for mask in range(1<<(k-1)):
+                    for d in range(1, 10):
+                        new_mask = rotate_right(mask|(1<<(k-1)), k, d)
+                        if new_mask&(1<<(k-1)) == 0:
+                            dp[i][mask] = (dp[i][mask]+dp[i-1][new_mask])%MOD
+            DP[k] = dp
+        return DP[k]
 
-    def count(s, k):
+    def count(s):
         result = int(s)
         dp = get_dp(k)
         for i in range(1, min(len(s), k)):
@@ -63,7 +63,7 @@ def dividing_passcodes():
 
     L, R, K = list(input().split())
     k = int(K)
-    return (count(increase(R), k)-count(L, k))%MOD
+    return (count(increase(R))-count(L))%MOD
 
 MOD = 998244353
 MAX_K = 25
