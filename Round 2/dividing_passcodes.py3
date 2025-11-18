@@ -8,6 +8,12 @@
 # Space: O(MAX_K * 2^MAX_K)
 #
 
+def rotate_right(mask, l, c):
+    c %= l
+    low = mask&((1<<c)-1)
+    high = mask>>c
+    return (low<<(l-c))|high
+
 def get_dp(k):
     if DP[k] is None:
         dp = [None]*k
@@ -16,23 +22,11 @@ def get_dp(k):
             dp[i] = [0]*(1<<(k-1))
             for mask in range(1<<(k-1)):
                 for d in range(1, 10):
-                    new_mask = add_mask(k, mask, d)
-                    if new_mask != -1:
+                    new_mask = rotate_right(mask|(1<<(k-1)), k, d)
+                    if new_mask&(1<<(k-1)) == 0:
                         dp[i][mask] = (dp[i][mask]+dp[i-1][new_mask])%MOD
         DP[k] = dp
     return DP[k]
-
-def add_mask(k, mask, d):
-    def rotate_right(mask, l, c):
-        c %= l
-        low = mask&((1<<c)-1)
-        high = mask>>c
-        return (low<<(l-c))|high
-
-    base = (d-1)%k  # shift for space optimization
-    if not ((mask&(1<<base) == 0) and base != k-1):
-        return -1
-    return rotate_right(mask|(1<<(k-1)), k, base+1)
 
 def dividing_passcodes():
     def increase(digits):
@@ -55,13 +49,13 @@ def dividing_passcodes():
         for i in range(min(len(s), k)):
             d = ord(s[i])-ord('0')
             for nd in range(1, d):
-                new_mask = add_mask(k, mask, nd)
-                if new_mask == -1:
+                new_mask = rotate_right(mask|(1<<(k-1)), k, nd)
+                if new_mask&(1<<(k-1)):
                     continue
                 if (len(s)-1)-i < k:
                     result = (result-dp[(len(s)-1)-i][new_mask])%MOD
-            mask = add_mask(k, mask, d)
-            if mask == -1:
+            mask = rotate_right(mask|(1<<(k-1)), k, d)
+            if mask&(1<<(k-1)):
                 break
         return result
 
