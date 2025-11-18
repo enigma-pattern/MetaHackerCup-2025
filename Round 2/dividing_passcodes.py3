@@ -30,10 +30,9 @@ def increase(digits):
 def dividing_passcodes():
     def get_dp(k):
         if DP[k] is None:
-            dp = [None]*k
+            dp = [[0]*(1<<(k-1)) for _ in range(k)]
             dp[0] = [1]*(1<<(k-1))
             for i in range(1, k):
-                dp[i] = [0]*(1<<(k-1))
                 for mask in range(1<<(k-1)):
                     for d in range(1, 10):
                         new_mask = rotate_right(mask|(1<<(k-1)), k, d)
