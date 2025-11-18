@@ -7,6 +7,8 @@
 #        runtime:    O(9 * min(logR, K))
 # Space: O(MAX_K * 2^MAX_K)
 #
+# pass in PyPy3 but Python3
+#
 
 def rotate_right(mask, l, c):
     c %= l
