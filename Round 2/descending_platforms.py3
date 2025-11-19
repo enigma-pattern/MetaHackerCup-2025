@@ -26,21 +26,18 @@ def descending_platforms():
     dp = [-1]*(max_cost+1)
     dp[0] = 0
     prev = [-1]*(max_cost+1)
-    mn = float("inf")
-    best_i = -1
+    best_i = mn = -1
     for i in range(max_cost+1):
         if dp[i] == -1:
             continue
         extra = ceil_divide(max(M-dp[i], 0), prefix[best+1])
         cost = i+extra*(best+1)
-        if cost < mn:
-            mn = cost
-            best_i = i
+        if best_i == -1 or cost < mn:
+            best_i, mn = i, cost
         for j in range(1, min(N, max_cost-i)+1):
             if not dp[i]+prefix[j] > dp[i+j]:
                 continue
-            dp[i+j] = dp[i]+prefix[j]
-            prev[i+j] = i
+            dp[i+j], prev[i+j] = dp[i]+prefix[j], i
     result = [0]*N
     result[best] += ceil_divide(max(M-dp[best_i], 0), prefix[best+1])
     i = best_i
