@@ -1,4 +1,4 @@
-# [MetaHackerCup-2025](https://www.facebook.com/codingcompetitions/hacker-cup) ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) ![Progress](https://img.shields.io/badge/progress-15%20%2F%2016-ff69b4.svg) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kamyu104.metahackercup.2025)
+# [MetaHackerCup-2025](https://www.facebook.com/codingcompetitions/hacker-cup) ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) ![Progress](https://img.shields.io/badge/progress-16%20%2F%2016-ff69b4.svg) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kamyu104.metahackercup.2025)
 
 * Python3 solutions of Meta Hacker Cup 2025. Solution begins with `*` means it will get TLE in the largest data set.
 * Total computation amount > `10^8`, which is not friendly for Python3 to solve in 5 ~ 15 seconds. A `6-minute` timer is set for uploading the result this year.
@@ -37,5 +37,5 @@
 |B| [Defining Prizes](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/B)| [Python3](./Round%202/defining_prizes.py3) | _O(M + NlogN)_ | _O(N)_ | Easy | | Freq Table, Sort, Binary Search |
 |C| [Designing Paths](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/C)| [Python3](./Round%202/designing_paths.py3) | _O(N + SlogS)_ | _O(N + S)_ | Medium | | Sorted List, BFS |
 |D| [Dividing Passcodes](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/D)| [PyPy3](./Round%202/dividing_passcodes.py3) | precompute: O(9 * MAX_K * 2^MAX_K)<br>runtime: O(9 * min(logR, K)) | O(MAX_K * 2^MAX_K) | Hard | | Bitmasks, DP |
-|E| [Descending Platforms](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/E)| | | | Hard | | |
+|E| [Descending Platforms](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/E)| [PyPy3](./Round%202/descending_platforms.py3) | _O(N^3)_ | _O(N^2)_ | Hard | | Prefix Sum, DP, Backtracing |
 
