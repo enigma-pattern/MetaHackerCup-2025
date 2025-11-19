@@ -35,4 +35,4 @@ def designing_paths():
     return sum(D[i]*(i+1) for i in range(N))
 
 for case in range(int(input())):
-    print('Case #%d: %d' % (case + 1, designing_paths()))
+    print('Case #%d: %s' % (case + 1, designing_paths()))

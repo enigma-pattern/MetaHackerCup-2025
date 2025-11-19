@@ -68,4 +68,4 @@ MOD = 998244353
 MAX_K = 25
 DP = [None]*(MAX_K+1)
 for case in range(int(input())):
-    print('Case #%d: %d' % (case+1, dividing_passcodes()))
+    print('Case #%d: %s' % (case+1, dividing_passcodes()))
