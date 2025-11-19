@@ -37,5 +37,5 @@
 |B| [Defining Prizes](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/B)| [Python3](./Round%202/defining_prizes.py3) | _O(M + NlogN)_ | _O(N)_ | Easy | | Freq Table, Sort, Binary Search |
 |C| [Designing Paths](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/C)| [Python3](./Round%202/designing_paths.py3) | _O(N + SlogS)_ | _O(N + S)_ | Medium | | Sorted List, BFS |
 |D| [Dividing Passcodes](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/D)| [PyPy3](./Round%202/dividing_passcodes.py3) | precompute: O(9 * MAX_K * 2^MAX_K)<br>runtime: O(9 * min(logR, K)) | O(MAX_K * 2^MAX_K) | Hard | | Bitmasks, DP |
-|E| [Descending Platforms](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/E)| [PyPy3](./Round%202/descending_platforms.py3) | _O(N^3)_ | _O(N^2)_ | Hard | | Prefix Sum, Greedy, DP, Backtracing |
+|E| [Descending Platforms](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/E)| [PyPy3](./Round%202/descending_platforms.py3) | _O(N^3)_ | _O(N^2)_ | Hard | | Prefix Sum, Greedy, DP, Backtracing, Difference Array |
 
