@@ -44,15 +44,15 @@ def patchwork_pyramid():
         for j in range(i+1):
             groups[grid[i][j]].append((i, j))
     result = [['.']*(i+1) for i in range(N)]
-    for idx in range(cnt):
+    for g in groups:
         lookup = [False]*26
-        for i, j in groups[idx]:
+        for i, j in g:
             for di, dj in DIRECTIONS:
                 ni, nj = i+di, j+dj
                 if 0 <= ni < N and 0 <= nj <= ni and result[ni][nj] != '.':
                     lookup[ord(result[ni][nj])-ord('a')] = True
         c = next(chr(ord('a')+i) for i in range(len(lookup)) if not lookup[i])
-        for i, j in groups[idx]:
+        for i, j in g:
             result[i][j] = c
     return "%d\n%s" % (cnt, "\n".join(map(lambda x: "".join(x), result)))
 
