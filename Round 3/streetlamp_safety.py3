@@ -27,4 +27,4 @@ def streetlamp_safety():
 
 INF = float("inf")
 for case in range(int(input())):
-    print('Case #%d: %d' % (case+1, streetlamp_safety()))
+    print('Case #%d: %s' % (case+1, streetlamp_safety()))
