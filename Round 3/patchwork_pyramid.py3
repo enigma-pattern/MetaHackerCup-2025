@@ -56,6 +56,6 @@ def patchwork_pyramid():
             result[i][j] = c
     return "%d\n%s" % (cnt, "\n".join(map(lambda x: "".join(x), result)))
 
-DIRECTIONS = ((1, 0), (0, 1), (-1, 0), (0, -1))
+DIRECTIONS = ((0, 1), (-1, 0), (0, -1))
 for case in range(int(input())):
     print('Case #%d: %s' % (case+1, patchwork_pyramid()))
