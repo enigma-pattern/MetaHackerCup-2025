@@ -44,7 +44,7 @@
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
 |---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
 |A| [Patchwork Pyramid](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/A)| | | | | | |
-|B| [Streetlamp Safety](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/B)| [Python3](./Round%203/streetlamp_safety.py3) | _O(N^2)_ | _O(N)_ | Easy | | DP |
+|B| [Streetlamp Safety](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/B)| [Python3](./Round%203/streetlamp_safety.py3) | _O(N^2)_ | _O(N)_ | Easy | | Prefix Sum, DP |
 |C| [Adversarial Attack](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/C)| | | | | | |
 |D| [Treehouse Telegram](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/D)| | | | | | |
 |E| [Bitstring Botcheck](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/E)| | | | | | |
