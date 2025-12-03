@@ -1,4 +1,4 @@
-# [MetaHackerCup-2025](https://www.facebook.com/codingcompetitions/hacker-cup) ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) ![Progress](https://img.shields.io/badge/progress-16%20%2F%2016-ff69b4.svg) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kamyu104.metahackercup.2025)
+# [MetaHackerCup-2025](https://www.facebook.com/codingcompetitions/hacker-cup) ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) ![Progress](https://img.shields.io/badge/progress-17%20%2F%2021-ff69b4.svg) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kamyu104.metahackercup.2025)
 
 * Python3 solutions of Meta Hacker Cup 2025. Solution begins with `*` means it will get TLE in the largest data set.
 * Total computation amount > `10^8`, which is not friendly for Python3 to solve in 5 ~ 15 seconds. A `6-minute` timer is set for uploading the result this year.
@@ -9,7 +9,8 @@
 * [Hacker Cup 2024](https://github.com/kamyu104/MetaHackerCup-2024)
 * [Practice Round](https://github.com/kamyu104/MetaHackerCup-2025#practice-round)
 * [Round 1](https://github.com/kamyu104/MetaHackerCup-2025#round-1)
-* [Round 1](https://github.com/kamyu104/MetaHackerCup-2025#round-2)
+* [Round 2](https://github.com/kamyu104/MetaHackerCup-2025#round-2)
+* [Round 3](https://github.com/kamyu104/MetaHackerCup-2025#round-3)
 
 ## Practice Round
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
@@ -39,3 +40,11 @@
 |D| [Dividing Passcodes](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/D)| [PyPy3](./Round%202/dividing_passcodes.py3) | precompute: O(9 * MAX_K * 2^MAX_K)<br>runtime: O(9 * min(logR, K)) | O(MAX_K * 2^MAX_K) | Hard | | Bitmasks, DP |
 |E| [Descending Platforms](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/E)| [PyPy3](./Round%202/descending_platforms.py3) | _O(N^3)_ | _O(N^2)_ | Hard | | Prefix Sum, Greedy, DP, Backtracing, Difference Array |
 
+## Round 3
+| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
+|---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
+|A| [Patchwork Pyramid](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/A)| | | | | | |
+|B| [Streetlamp Safety](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/B)| [Python3](./Round%203/streetlamp_safety.py3) | _O(N^2)_ | _O(N)_ | Easy | | DP |
+|C| [Adversarial Attack](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/C)| | | | | | |
+|D| [Treehouse Telegram](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/D)| | | | | | |
+|E| [Bitstring Botcheck](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/E)| | | | | | |
