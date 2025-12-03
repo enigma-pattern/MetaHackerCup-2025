@@ -45,7 +45,7 @@ def patchwork_pyramid():
             groups[grid[i][j]].append((i, j))
     result = [['.']*(i+1) for i in range(N)]
     for g in groups:
-        lookup = [False]*26
+        lookup = [False]*4
         for i, j in g:
             for di, dj in DIRECTIONS:
                 ni, nj = i+di, j+dj
