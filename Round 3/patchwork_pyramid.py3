@@ -25,21 +25,20 @@ def patchwork_pyramid():
                 else:
                     grid[i][j] = grid[i][j-1]
     else:
-        ordering = []
+        idx = 0
         for i in range(N):
             if i%2 == 0:
                 for j in range(i+1):
-                    ordering.append((i, j))
+                    grid[i][j] = idx//K
+                    cnt = max(cnt, idx//K+1)
+                    idx += 1
             else:
                 for j in reversed(range(i+1)):
-                    ordering.append((i, j))
-        for idx, (i, j) in enumerate(ordering):
-            grid[i][j] = idx//K
-            cnt = max(cnt, idx//K+1)
-        for idx in range(K-1, len(ordering), K):
-            r, c = ordering[idx]
-            if r == c and r%2:
-                grid[r][c-1], grid[r-1][max(c-K+1, 0)] = grid[r-1][max(c-K+1, 0)], grid[r][c-1]
+                    grid[i][j] = idx//K
+                    cnt = max(cnt, idx//K+1)
+                    idx += 1
+                if grid[i][i] != grid[i][i-1]:
+                    grid[i][i-1], grid[i-1][max(i-K+1, 0)] = grid[i-1][max(i-K+1, 0)], grid[i][i-1]
     groups = [[] for _ in range(cnt)]
     for i in range(N):
         for j in range(i+1):
