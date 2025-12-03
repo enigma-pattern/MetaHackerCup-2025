@@ -19,9 +19,9 @@ def streetlamp_safety():
     for i in range(N):
         new_dp = [[INF]*(N+1) for _ in range(2)]
         for k in range(B[i], i+1):
-            new_dp[0][k] = min(new_dp[0][k], min(dp[0][k], dp[1][k]))
+            new_dp[0][k] = min(dp[0][k], dp[1][k])
         for k in range(B[i]-1, i+1):
-            new_dp[1][k+1] = min(new_dp[1][k+1], min(dp[0][k]+(prefix[i]-prefix[i-k]), dp[1][k])+(prefix[i+1]-prefix[i]))
+            new_dp[1][k+1] = min(dp[0][k]+(prefix[i]-prefix[i-k]), dp[1][k])+(prefix[i+1]-prefix[i])
         dp = new_dp
     return min(dp[i][j] for i in range(2) for j in range(N+1))
 
