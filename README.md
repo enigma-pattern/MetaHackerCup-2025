@@ -45,6 +45,6 @@
 |---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
 |A| [Patchwork Pyramid](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/A)| [Python3](./Round%203/patchwork_pyramid.py3) | _O(N^2)_ | _O(N^2)_ | Easy | | Constructive Algorithms |
 |B| [Streetlamp Safety](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/B)| [Python3](./Round%203/streetlamp_safety.py3) | _O(N^2)_ | _O(N)_ | Easy | | Prefix Sum, DP |
-|C| [Adversarial Attack](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/C)| [PyPy3](./Round%203/adversarial_attack.py3) | _O(N * (L + KlogK))_ | _O(K + L)_ | Hard | | KMP, Bitset DP, Binary Lifting |
+|C| [Adversarial Attack](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/C)| [PyPy3](./Round%203/adversarial_attack.py3) | _O(N * (L + KlogK))_ | _O(L + K)_ | Hard | | KMP, Bitset DP, Binary Lifting |
 |D| [Treehouse Telegram](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/D)| | | | | | |
 |E| [Bitstring Botcheck](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/E)| | | | | | |

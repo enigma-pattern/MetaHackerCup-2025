@@ -4,7 +4,7 @@
 # https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/C
 #
 # Time:  O(N * (L + KlogK)), L = max length of uncompressed words
-# Space: O(K + L)
+# Space: O(L + K)
 #
 # pass in PyPy3 but Python3
 #
