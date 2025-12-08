@@ -8,7 +8,7 @@
 #
 
 def patchwork_pyramid():
-    N, K = map(int, input().split())
+    N, K = list(map(int, input().split()))
     grid = [[-1]*(i+1) for i in range(N)]
     cnt = 0
     if K == 1:
