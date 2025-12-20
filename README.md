@@ -11,6 +11,7 @@
 * [Round 1](https://github.com/kamyu104/MetaHackerCup-2025#round-1)
 * [Round 2](https://github.com/kamyu104/MetaHackerCup-2025#round-2)
 * [Round 3](https://github.com/kamyu104/MetaHackerCup-2025#round-3)
+* [Final Round](https://github.com/kamyu104/MetaHackerCup-2025#final-round)
 
 ## Practice Round
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
