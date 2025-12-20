@@ -1,4 +1,4 @@
-# [MetaHackerCup-2025](https://www.facebook.com/codingcompetitions/hacker-cup) ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) ![Progress](https://img.shields.io/badge/progress-21%20%2F%2021-ff69b4.svg) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kamyu104.metahackercup.2025)
+# [MetaHackerCup-2025](https://www.facebook.com/codingcompetitions/hacker-cup) ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) ![Progress](https://img.shields.io/badge/progress-21%20%2F%2028-ff69b4.svg) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kamyu104.metahackercup.2025)
 
 * Python3 solutions of Meta Hacker Cup 2025. Solution begins with `*` means it will get TLE in the largest data set.
 * Total computation amount > `10^8`, which is not friendly for Python3 to solve in 5 ~ 15 seconds. A `6-minute` timer is set for uploading the result this year.
@@ -48,3 +48,16 @@
 |C| [Adversarial Attack](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/C)| [PyPy3](./Round%203/adversarial_attack.py3) | _O(N * (L + KlogK))_ | _O(L + K)_ | Hard | | KMP, Bitset DP, Binary Lifting |
 |D| [Treehouse Telegram](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/D)| [Python3](./Round%203/treehouse_telegram.py3) | _O(N * (logN)^2)_ | _O(N)_ | Medium | | HLD, LCA, Principle of Inclusion and Exclusion |
 |E| [Bitstring Botcheck](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/E)| [Python3](./Round%203/bitstring_botcheck.py3) | _O(N^2)_ | _O(N)_ | Hard | | Precompute, BFS, Bitmasks, Constructive Algorithms, Invariants |
+
+## Final Round
+You can relive the magic of the 2025 Hacker Cup World Finals by watching the [Live Stream Recording](https://www.facebook.com/hackercup/videos/1184589873879861) of the announcement of winners.
+
+| # | Title | Solution | Time | Space | Difficulty | Tag | Note |
+|---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
+|A| [Supermarket Shifts](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/A)|  | | | | | |
+|B| [Polishing Problems](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/B)|  | | | | | |
+|C1| [Cube Coloring (Chapter 1)](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/C1)|  | | | | | |
+|C2| [Cube Coloring (Chapter 2)](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/C2)|  | | | | | |
+|D| [Wiring Wreaths](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/D)|  | | | | | |
+|E| [Lonesome Lookout](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/E)|  | | | | | |
+|F| [Reindeer Rally](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/F)|  | | | | | |
