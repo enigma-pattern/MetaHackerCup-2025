@@ -30,7 +30,7 @@ def supermarket_shifts():
     A = list(map(lambda x: int(x)-1, input().split()))
     B = list(map(lambda x: int(x)-1, input().split()))
     X_Y = [list(map(lambda x: int(x)-1, input().split())) for _ in range(M)]
-    if not all((A[x] < A[y]) == (B[x] < B[y]) for x, y in X_Y):
+    if any((A[x] < A[y]) != (B[x] < B[y]) for x, y in X_Y):
         return -1
     lookup = [0]*N
     for i in range(N):
