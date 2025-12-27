@@ -55,7 +55,7 @@ You can relive the magic of the 2025 Hacker Cup World Finals by watching the [Li
 
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
 |---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
-|A| [Supermarket Shifts](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/A)| [Python3](./Final%20Round/supermarket_shifts.py3) | O(M + NlogN) | O(N) | Easy | | BIT, Inversions |
+|A| [Supermarket Shifts](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/A)| [Python3](./Final%20Round/supermarket_shifts.py3) | O(M + NlogN) | O(N) | Easy | | BIT, Fenwick Tree, Inversions |
 |B| [Polishing Problems](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/B)|  | | | | | |
 |C1| [Cube Coloring (Chapter 1)](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/C1)|  | | | | | |
 |C2| [Cube Coloring (Chapter 2)](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/C2)|  | | | | | |
