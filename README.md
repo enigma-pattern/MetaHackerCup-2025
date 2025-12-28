@@ -1,4 +1,4 @@
-# [MetaHackerCup-2025](https://www.facebook.com/codingcompetitions/hacker-cup) ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) ![Progress](https://img.shields.io/badge/progress-22%20%2F%2028-ff69b4.svg) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kamyu104.metahackercup.2025)
+# [MetaHackerCup-2025](https://www.facebook.com/codingcompetitions/hacker-cup) ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) ![Progress](https://img.shields.io/badge/progress-23%20%2F%2028-ff69b4.svg) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kamyu104.metahackercup.2025)
 
 * Python3 solutions of Meta Hacker Cup 2025. Solution begins with `*` means it will get TLE in the largest data set.
 * Total computation amount > `10^8`, which is not friendly for Python3 to solve in 5 ~ 15 seconds. A `6-minute` timer is set for uploading the result this year.
@@ -38,7 +38,7 @@
 |A| [Deciding Points](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/A)| [Python3](./Round%202/deciding_points.py3) | _O(1)_ | _O(1)_ | Easy | | Math |
 |B| [Defining Prizes](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/B)| [Python3](./Round%202/defining_prizes.py3) | _O(M + NlogN)_ | _O(N)_ | Easy | | Freq Table, Sort, Binary Search |
 |C| [Designing Paths](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/C)| [Python3](./Round%202/designing_paths.py3) | _O(N + SlogS)_ | _O(N + S)_ | Medium | | Sorted List, BFS |
-|D| [Dividing Passcodes](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/D)| [PyPy3](./Round%202/dividing_passcodes.py3) | precompute: O(9 * MAX_K * 2^MAX_K)<br>runtime: O(9 * min(logR, K)) | O(MAX_K * 2^MAX_K) | Hard | | Bitmasks, DP |
+|D| [Dividing Passcodes](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/D)| [PyPy3](./Round%202/dividing_passcodes.py3) | precompute: _O(9 * MAX_K * 2^MAX_K)_<br>runtime: _O(9 * min(logR, K))_ | _O(MAX_K * 2^MAX_K)_ | Hard | | Bitmasks, DP |
 |E| [Descending Platforms](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-2/problems/E)| [PyPy3](./Round%202/descending_platforms.py3) | _O(N^3)_ | _O(N^2)_ | Hard | | Prefix Sum, Greedy, DP, Backtracing, Difference Array |
 
 ## Round 3
@@ -55,10 +55,10 @@ You can relive the magic of the 2025 Hacker Cup World Finals by watching the [Li
 
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
 |---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
-|A| [Supermarket Shifts](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/A)| [Python3](./Final%20Round/supermarket_shifts.py3) | O(M + NlogN) | O(N) | Easy | | BIT, Fenwick Tree, Inversions |
+|A| [Supermarket Shifts](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/A)| [Python3](./Final%20Round/supermarket_shifts.py3) | _O(M + NlogN)_ | _O(N)_ | Easy | | BIT, Fenwick Tree, Inversions |
 |B| [Polishing Problems](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/B)|  | | | | | |
 |C1| [Cube Coloring (Chapter 1)](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/C1)|  | | | | | |
 |C2| [Cube Coloring (Chapter 2)](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/C2)|  | | | | | |
 |D| [Wiring Wreaths](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/D)|  | | | | | |
-|E| [Lonesome Lookout](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/E)|  | | | | | |
+|E| [Lonesome Lookout](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/E)| [PyPy3](./Final%20Round/lonesome_lookout.py3) | _O(N + LlogL)_ | _O(N + L)_ | Medium | | Combinatorics, NTT, Garner's Algorithm, Principle of Inclusion and Exclusion |
 |F| [Reindeer Rally](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/F)|  | | | | | |
