@@ -6,7 +6,7 @@
 # Time:  O(N + M + N^2 * 2^C * logN * C) = O(N^2 * logN * C * 2^C),
 #        C = max number of cycles on any path (at most N/3),
 #        C is typically small and greedy elimination is highly effective
-# Space: O(N + M + N * C * 2^C) = O(N * C * 2^C)
+# Space: O(N + M + N * 2^C) = O(N * 2^C)
 #
 
 from collections import defaultdict
