@@ -3,10 +3,10 @@
 # Meta Hacker Cup 2025 Final Round - Problem D. Wiring Wreaths
 # https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/D
 #
-# Time:  O(N + M + N^2 * 2^C * logN * C) = O(N^2 * logN * C * 2^C),
-#        C = max number of cycles on any path (at most N/3),
-#        C is typically small and greedy elimination is highly effective
-# Space: O(N + M + N * 2^C) = O(N * 2^C)
+# Time:  O(N + M + N^2 * logN * (C + 2^C)) ~= O(N^3 * logN),
+#        since C = max number of cycles on any path (at most N/3),
+#        and C is typically small and greedy elimination is highly effective
+# Space: O(N + M + C) = O(N)
 #
 
 from collections import defaultdict
