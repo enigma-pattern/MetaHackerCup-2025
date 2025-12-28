@@ -59,6 +59,6 @@ You can relive the magic of the 2025 Hacker Cup World Finals by watching the [Li
 |B| [Polishing Problems](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/B)|  | | | | | |
 |C1| [Cube Coloring (Chapter 1)](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/C1)|  | | | | | |
 |C2| [Cube Coloring (Chapter 2)](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/C2)|  | | | | | |
-|D| [Wiring Wreaths](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/D)| [Python3](./Final%20Round/wiring_wreaths.py3) | _O(N^3)_ | _O(N^2)_ | Medium | | Tarjan's Algorithm, BCCs, Biconnected Components, DFS, Bitmasks, Binary Search, Greedy, Backtracking, Pruning, Prefix Sum |
+|D| [Wiring Wreaths](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/D)| [Python3](./Final%20Round/wiring_wreaths.py3) | _O(N^2 * logN * C * 2^C)_ | _O(N * C * 2^C)_ | Medium | | Tarjan's Algorithm, BCCs, Biconnected Components, DFS, Bitmasks, Binary Search, Greedy, Backtracking, Pruning, Prefix Sum |
 |E| [Lonesome Lookout](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/E)| [PyPy3](./Final%20Round/lonesome_lookout.py3) | _O(N + LlogL)_ | _O(N + L)_ | Medium | | Combinatorics, NTT, Garner's Algorithm, Principle of Inclusion and Exclusion |
 |F| [Reindeer Rally](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/F)|  | | | | | |
