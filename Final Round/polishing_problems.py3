@@ -42,7 +42,7 @@ def nth_element(nums, n, left=0, compare=lambda a, b: a < b):
         else:  # pivot_right < n.
             left = pivot_right+1
 
-def log_comb(n, k):
+def log_nCr(n, k):
     return LOG_FACT[n]-LOG_FACT[k]-LOG_FACT[n-k]
 
 def load():
@@ -60,7 +60,7 @@ def polishing_problems():
     _ = int(input())
     S = input()
     S_cnt = Counter(S)
-    top_k = [(sum(log_comb(cand_cnt.get(c, 0), k) for c, k in S_cnt.items()), i) for i, cand_cnt in enumerate(cand_cnts) if all(cand_cnt.get(c, 0) >= k for c, k in S_cnt.items())]
+    top_k = [(sum(log_nCr(cand_cnt.get(c, 0), k) for c, k in S_cnt.items()), i) for i, cand_cnt in enumerate(cand_cnts) if all(cand_cnt.get(c, 0) >= k for c, k in S_cnt.items())]
     k = min(K, len(top_k)) if K else len(top_k)
     if k < len(top_k):
         nth_element(top_k, k-1, compare=lambda a, b: a[0] > b[0])
