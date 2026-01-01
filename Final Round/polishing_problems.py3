@@ -60,17 +60,16 @@ def polishing_problems():
     _ = int(input())
     S = input()
     S_cnt = Counter(S)
-    top_k = [(sum(log_nCr(cand_cnt.get(c, 0), k) for c, k in S_cnt.items()), i) for i, cand_cnt in enumerate(cand_cnts) if all(cand_cnt.get(c, 0) >= k for c, k in S_cnt.items())]
-    k = min(K, len(top_k)) if K else len(top_k)
-    if k < len(top_k):
-        nth_element(top_k, k-1, compare=lambda a, b: a[0] > b[0])
+    candidates = [(sum(log_nCr(cand_cnt.get(c, 0), k) for c, k in S_cnt.items()), i) for i, cand_cnt in enumerate(cand_cnts) if all(cand_cnt.get(c, 0) >= k for c, k in S_cnt.items())]
+    k = min(len(candidates), K if K else float("inf"))
+    nth_element(candidates, k-1, compare=lambda a, b: a[0] > b[0])
     best, best_start = (-1, -1), -1
     char_mask = {}
     for i, c in enumerate(S):
         char_mask[c] = char_mask.get(c, 0)|(1<<i)
     mask = (1<<len(S))-1
     for i in range(k):
-        bag, idx = top_k[i]
+        bag, idx = candidates[i]
         lcs = lcs_bitset("".join(TEXT[cand_starts[idx]+j] for j in fixed_idxs), char_mask, mask)
         if (lcs, bag) > best:
             best, best_start = (lcs, bag), cand_starts[idx]
