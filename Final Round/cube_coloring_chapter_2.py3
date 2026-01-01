@@ -14,14 +14,13 @@ def cube_coloring_chapter_2():
     for i in range(N-1):
         for j in range(i+1):
             adj[i+1][j] = adj[j][i+1] = A[i][j]
+    for i in range(N):
+        adj[i][i] = 1
     result = [[[' ']*M for _ in range(M)] for _ in range(M)]
     for idx, g in enumerate(ORDER):
         for i in range(min(G, N-g*G)):
             for z in range(2*1, 2*G+1):
-                result[idx*4][2*i+2][z] = CHARS[g*G+i]
-            result[idx*4+1][2*i+2][2*i+2] = CHARS[g*G+i]
-            for z in range(2*1, 2*G+1):
-                result[idx*4+2][z][2*i+2] = CHARS[g*G+i]
+                result[idx*4][2*i+2][z] = result[idx*4+2][z][2*i+2] = CHARS[g*G+i]
             for j in range(G):
                 if g*G+j < N and adj[g*G+i][g*G+j]:
                     result[idx*4+1][2*j+2][2*i+2] = CHARS[g*G+i]
