@@ -49,11 +49,16 @@ def load():
     with open(TEXT_FILE) as f:
         return f.read()
 
-def lcs_bitset(s, char_mask, mask):
+def lcs_bitset(s, t):
+    if len(s) > len(t):
+        s, t = t, s
+    lookup = {}
+    for i, c in enumerate(s):
+        lookup[c] = lookup.get(c, 0)|(1<<i)
     dp = 0
-    for c in s:
-        x = dp|char_mask.get(c, 0)
-        dp = x&~(x-((dp<<1)|1))&mask
+    for c in t:
+        x = dp|lookup.get(c, 0)
+        dp = x&~(x-((dp<<1)|1))
     return bin(dp).count('1')
 
 def polishing_problems():
@@ -64,13 +69,9 @@ def polishing_problems():
     k = min(len(candidates), K if K else float("inf"))
     nth_element(candidates, k-1, compare=lambda a, b: a[0] > b[0])
     best, best_start = (-1, -1), -1
-    char_mask = {}
-    for i, c in enumerate(S):
-        char_mask[c] = char_mask.get(c, 0)|(1<<i)
-    mask = (1<<len(S))-1
     for i in range(k):
         bag, idx = candidates[i]
-        lcs = lcs_bitset("".join(TEXT[cand_starts[idx]+j] for j in fixed_idxs), char_mask, mask)
+        lcs = lcs_bitset(S, "".join(TEXT[cand_starts[idx]+j] for j in fixed_idxs))
         if (lcs, bag) > best:
             best, best_start = (lcs, bag), cand_starts[idx]
     return best, best_start
