@@ -1,4 +1,4 @@
-# [MetaHackerCup-2025](https://www.facebook.com/codingcompetitions/hacker-cup) ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) ![Progress](https://img.shields.io/badge/progress-24%20%2F%2028-ff69b4.svg) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kamyu104.metahackercup.2025)
+# [MetaHackerCup-2025](https://www.facebook.com/codingcompetitions/hacker-cup) ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) ![Progress](https://img.shields.io/badge/progress-25%20%2F%2028-ff69b4.svg) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kamyu104.metahackercup.2025)
 
 * Python3 solutions of Meta Hacker Cup 2025. Solution begins with `*` means it will get TLE in the largest data set.
 * Total computation amount > `10^8`, which is not friendly for Python3 to solve in 5 ~ 15 seconds. A `6-minute` timer is set for uploading the result this year.
@@ -56,7 +56,7 @@ You can relive the magic of the 2025 Hacker Cup World Finals by watching the [Li
 | # | Title | Solution | Time | Space | Difficulty | Tag | Note |
 |---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
 |A| [Supermarket Shifts](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/A)| [Python3](./Final%20Round/supermarket_shifts.py3) | _O(M + NlogN)_ | _O(N)_ | Easy | | BIT, Fenwick Tree, Inversions |
-|B| [Polishing Problems](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/B)|  | | | | | |
+|B| [Polishing Problems](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/B)| [Python3](./Final%20Round/polishing_problems.py3) | _O(L + T * (C + K * F * N / 64) + TlogT)_ | _O()L_ | Hard | | Math, Freq Table, Sliding Window, Bag of Words, Quick Select, LCS, Bitset DP |
 |C1| [Cube Coloring (Chapter 1)](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/C1)|  | | | | | |
 |C2| [Cube Coloring (Chapter 2)](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/C2)|  | | | | | |
 |D| [Wiring Wreaths](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/D)| [Python3](./Final%20Round/wiring_wreaths.py3) | _O(N^3 * logN)_ | _O( N)_ | Medium | | Tarjan's Algorithm, BCCs, Biconnected Components, DFS, Bitmasks, Binary Search, Greedy, Backtracking, Pruning, Prefix Sum |
