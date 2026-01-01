@@ -74,7 +74,7 @@ def polishing_problems():
         lcs = lcs_bitset("".join(TEXT[cand_starts[idx]+j] for j in fixed_idxs), char_mask, mask)
         if (lcs, bag) > best:
             best, best_start = (lcs, bag), cand_starts[idx]
-    return (best, best_start)
+    return best, best_start
 
 L = 2025
 TEXT_FILE = "ProblemText.txt"
