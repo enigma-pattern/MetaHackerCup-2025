@@ -1,4 +1,4 @@
-# [MetaHackerCup-2025](https://www.facebook.com/codingcompetitions/hacker-cup) ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) ![Progress](https://img.shields.io/badge/progress-27%20%2F%2028-ff69b4.svg) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kamyu104.metahackercup.2025)
+# [MetaHackerCup-2025](https://www.facebook.com/codingcompetitions/hacker-cup) ![Language](https://img.shields.io/badge/language-Python3-orange.svg) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) ![Progress](https://img.shields.io/badge/progress-28%20%2F%2028-ff69b4.svg) ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=kamyu104.metahackercup.2025)
 
 * Python3 solutions of Meta Hacker Cup 2025. Solution begins with `*` means it will get TLE in the largest data set.
 * Total computation amount > `10^8`, which is not friendly for Python3 to solve in 5 ~ 15 seconds. A `6-minute` timer is set for uploading the result this year.
@@ -61,4 +61,4 @@ You can relive the magic of the 2025 Hacker Cup World Finals by watching the [Li
 |C2| [Cube Coloring (Chapter 2)](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/C2)| [Python3](./Final%20Round/cube_coloring_chapter_2.py3) | _O(N^2 + M^3)_ | _O(N^2)_ | Hard | | Constructive Algorithms |
 |D| [Wiring Wreaths](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/D)| [Python3](./Final%20Round/wiring_wreaths.py3) | _O(N^3 * logN)_ | _O( N)_ | Medium | | Tarjan's Algorithm, BCCs, Biconnected Components, DFS, Bitmasks, Binary Search, Greedy, Backtracking, Pruning, Prefix Sum |
 |E| [Lonesome Lookout](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/E)| [PyPy3](./Final%20Round/lonesome_lookout.py3) | _O(N + LlogL)_ | _O(N + L)_ | Medium | | Combinatorics, NTT, Garner's Algorithm, Principle of Inclusion and Exclusion |
-|F| [Reindeer Rally](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/F)|  | | | | | |
+|F| [Reindeer Rally](https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/F)| [Python3](./Final%20Round/reindeer_rally.py3) | _O(M^2 * RlogR / 64 + N * MlogM)_ | _O(N * M + R * M^2 / 64)_ | Hard | | Bitset DP, Backtracing, EGZ Theorem |
