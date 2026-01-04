@@ -76,7 +76,7 @@ def EGZ(n, a):
     return EGZ_prime(n, a)
 
 def reindeer_rally():
-    def find_discards(vals, remain, total):
+    def find_discards(remain, total):
         group = [[] for _ in range(M)]
         for i, x in enumerate(vals):  # Time: O(N * M), Space: O(M * R)
             if x != -1 and len(group[x]) < remain:
@@ -121,7 +121,7 @@ def reindeer_rally():
     vals = [x%M if x != -1 else -1 for w in W for x in w]
     cnt = reduce(lambda accu, x: accu+(1 if x != -1 else 0), vals, 0)
     total = reduce(lambda accu, x: (accu+x)%M if x != -1 else accu, vals, 0)
-    discards = find_discards(vals, cnt%M, total)
+    discards = find_discards(cnt%M, total)
     diff = (total-sum(vals[i] for i in discards))%M
     lookup = [v == -1 for v in vals]
     for i in discards:
