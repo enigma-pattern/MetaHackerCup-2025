@@ -25,7 +25,7 @@ def Find_t(p, T, d, u, v):
             h = m
     return h*d % p
 
-# Template: https://github.com/ho94949/egz
+# Template: https://github.com/ho94949/EGZ/blob/main/EGZ.py
 # Time: O(NlogN), Space: O(N)
 def EGZ_prime(p, a):
     k = sorted(range(2*p-1), key=lambda x: a[x] % p)
