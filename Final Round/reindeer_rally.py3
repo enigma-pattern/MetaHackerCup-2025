@@ -3,7 +3,7 @@
 # Meta Hacker Cup 2025 Final Round - Problem F. Reindeer Rally
 # https://www.facebook.com/codingcompetitions/hacker-cup/2025/final-round/problems/F
 #
-# Time:  O(M^2 * RlogR / 64 + N * MlogM)
+# Time:  O(M^2 * RlogR / 64 + N * MlogM), R = remain
 # Space: O(N * M + R * M^2 / 64)
 #
 
@@ -78,7 +78,7 @@ def EGZ(n, a):
 def reindeer_rally():
     def find_discards(remain, total):
         group = [[] for _ in range(M)]
-        for i, x in enumerate(vals):  # Time: O(N * M), Space: O(M * R)
+        for i, x in enumerate(vals):  # Time: O(N * M), Space: O(M * R), R = remain
             if x != -1 and len(group[x]) < remain:
                 group[x].append(i)
         groups = []
