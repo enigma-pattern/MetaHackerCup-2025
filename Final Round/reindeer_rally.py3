@@ -120,7 +120,7 @@ def reindeer_rally():
     W = [list(map(int, input().split())) for _ in range(N)]
     vals = [x%M if x != -1 else -1 for w in W for x in w]
     cnt = reduce(lambda accu, x: accu+(1 if x != -1 else 0), vals, 0)
-    total = reduce(lambda accu, x: (accu+x)%M if x != -1 else accu, vals, 0)
+    total = reduce(lambda accu, x: (accu+(x if x != -1 else 0))%M, vals, 0)
     discards = find_discards(cnt%M, total)
     diff = (total-sum(vals[i] for i in discards))%M
     lookup = [v == -1 for v in vals]
