@@ -122,7 +122,6 @@ def reindeer_rally():
     cnt = reduce(lambda accu, x: accu+(1 if x != -1 else 0), vals, 0)
     total = reduce(lambda accu, x: (accu+(x if x != -1 else 0))%M, vals, 0)
     discards = find_discards(cnt%M, total)
-    diff = (total-sum(vals[i] for i in discards))%M
     lookup = [v == -1 for v in vals]
     for i in discards:
         lookup[i] = True
@@ -144,9 +143,11 @@ def reindeer_rally():
                 candidates[r].append(i)
         teams.append([i for idx, (_, i) in enumerate(arr) if chosen[idx]])
     result = A*len(teams)
-    if A-diff*B > 0:
-        teams.append([i for candidate in candidates for i in candidate])
-        result += A-diff*B
+    last = [i for candidate in candidates for i in candidate]
+    diff = A-B*reduce(lambda accu, x: (accu+vals[x-1])%M, last, 0)
+    if diff > 0:
+        teams.append(last)
+        result += diff
     return "%s %s\n%s" % (result, len(teams), "\n".join(" ".join(map(str, t)) for t in teams))
 
 for case in range(int(input())):
