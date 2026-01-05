@@ -66,7 +66,7 @@ def EGZ_composite(p, q, a):
                 L[j] = True
     return L
 
-def EGZ(n, a):  # Time: O(NlogN), Space: O(N)
+def EGZ(n, a):  # Time: O(nlogn), Space: O(n)
     if n == 1:
         return [True]
     for i in range(2, n):
