@@ -16,7 +16,6 @@ def rotate_left(mask, l, c):
     return high|low
 
 # Template: https://github.com/ho94949/EGZ/blob/main/EGZ.py
-# Time: O(NlogN), Space: O(N)
 def Find_t(p, T, d, u, v):
     l, h = u*pow(d, -1, p) % p, p+v*pow(d, -1, p) % p
     while l+1 != h:
@@ -67,7 +66,7 @@ def EGZ_composite(p, q, a):
                 L[j] = True
     return L
 
-def EGZ(n, a):
+def EGZ(n, a):  # Time: O(NlogN), Space: O(N)
     if n == 1:
         return [True]
     for i in range(2, n):
