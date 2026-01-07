@@ -54,7 +54,7 @@ def patchwork_pyramid():
         c = next(chr(ord('a')+i) for i in range(len(lookup)) if not lookup[i])
         for i, j in g:
             result[i][j] = c
-    return "%d\n%s" % (cnt, "\n".join(map(lambda x: "".join(x), result)))
+    return "%s\n%s" % (cnt, "\n".join(map(lambda x: "".join(x), result)))
 
 DIRECTIONS = ((0, 1), (-1, 0), (0, -1))
 for case in range(int(input())):
