@@ -3,7 +3,7 @@
 # Meta Hacker Cup 2025 Round 3 - Problem C. Adversarial Attack
 # https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/C
 #
-# Time:  O(N * (L + logL * KlogK / 64)), L = max length of uncompressed words
+# Time:  O(N * (L + (logL)^2 * K / 64)), L = max length of uncompressed words
 # Space: O(L + K / 64)
 #
 # pass in PyPy3 but Python3
