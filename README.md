@@ -46,7 +46,7 @@
 |---| ----- | -------- | ---- | ----- | ---------- | --- | ---- |
 |A| [Patchwork Pyramid](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/A)| [Python3](./Round%203/patchwork_pyramid.py3) | _O(N^2)_ | _O(N^2)_ | Medium | | Constructive Algorithms |
 |B| [Streetlamp Safety](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/B)| [Python3](./Round%203/streetlamp_safety.py3) | _O(N^2)_ | _O(N)_ | Easy | | Prefix Sum, DP |
-|C| [Adversarial Attack](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/C)| [PyPy3](./Round%203/adversarial_attack.py3) | _O(N * (L + KlogK / 64))_ | _O(L + K / 64)_ | Hard | | KMP, Bitset DP, Binary Lifting |
+|C| [Adversarial Attack](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/C)| [PyPy3](./Round%203/adversarial_attack.py3) | _O(N * (L + logL * KlogK / 64))_ | _O(L + K / 64)_ | Hard | | KMP, Bitset DP, Binary Lifting |
 |D| [Treehouse Telegram](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/D)| [Python3](./Round%203/treehouse_telegram.py3) | _O(N * (logN)^2)_ | _O(N)_ | Medium | | HLD, LCA, Principle of Inclusion and Exclusion |
 |E| [Bitstring Botcheck](https://www.facebook.com/codingcompetitions/hacker-cup/2025/round-3/problems/E)| [Python3](./Round%203/bitstring_botcheck.py3) | _O(N^2)_ | _O(N)_ | Hard | | Precompute, BFS, Bitmasks, Constructive Algorithms, Invariants |
 
