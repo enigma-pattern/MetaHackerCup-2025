@@ -45,7 +45,7 @@ def adversarial_attack():
         curr = decode(c)
         prefix = getPrefix(curr+"#"+prev)
         extras, m = [], prefix[-1]+1
-        while m >= 0 and len(curr)-m <= K-mn:
+        while len(curr)-m <= K-mn:
             extras.append(len(curr)-m)
             if m == 0:
                 break
